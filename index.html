@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main id="container">
+        <h1>POKEDEX</h1>
+        <form id="form">
+            <label for="input">Digite o Pokemon</label>
+            <input type="text" id="input" placeholder="Pikachu ou 25" required>
+            <button type="submit">BUSCAR</button>
+        </form>
+
+        <div id="info">
+            <p><span id="resultado"></span></p>
+            <img id="img" src="" alt="">
+            <p class="caixa">Nome: <span id="nome"></span></p>
+            <p class="caixa">Número: <span id="numero"></span></p>
+            <p class="caixa">Tipo: <span id="tipo"></span></p>
+            <p class="caixa">Status: <span id="status"></span></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

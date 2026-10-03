@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0d0b14;
+    color: #eee;
+}
+
+/* ===== Card ===== */
+#container {
+    width: 100%;
+    max-width: 420px;
+    background: #1a1626;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(160, 32, 240, 0.3);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    color: #e14eff;
+    text-shadow: 0 0 10px rgba(225, 78, 255, 0.7);
+}
+
+/* ===== Formulário ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 0.9rem;
+}
+
+input {
+    background: #0d0b14;
+    border: 1px solid #4a3a6a;
+    border-radius: 8px;
+    padding: 12px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #e14eff;
+    box-shadow: 0 0 10px rgba(225, 78, 255, 0.5);
+}
+
+button {
+    margin-top: 6px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #8e2de2, #e14eff);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+button:hover {
+    box-shadow: 0 0 16px #e14eff;
+    transform: translateY(-2px);
+}
+
+/* ===== Resultado ===== */
+#info {
+    margin-top: 24px;
+    padding: 16px;
+    background: #0d0b14;
+    border: 1px solid #4a3a6a;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#info:has(#nome:empty):has(#resultado:empty) {
+    display: none;
+}
+
+#info p {
+    margin: 6px 0;
+    color: #9a8bb5;
+}
+
+#info span {
+    color: #f3c6ff;
+    font-weight: 600;
+}
+
+#nome {
+    text-transform: capitalize;
+}
+
+#tipo {
+    text-transform: uppercase;
+    color: #e14eff;
+    letter-spacing: 1px;
+}
+
+/* mensagem de erro */
+#resultado {
+    color: #ff6ec7;
+}
+
+.caixa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+    padding: 10px 16px;
+    border: 1px solid #e14eff;
+    border-radius: 8px;
+    background: rgba(225, 78, 255, 0.08);
+    color: #d9b8ff;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(225, 78, 255, 0.35),
+                inset 0 0 8px rgba(225, 78, 255, 0.15);
+    cursor: default;
+}
+
+.caixa span {
+    text-align: right;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(225, 78, 255, 0.8);
+}
+
+/* esconde as caixas enquanto não tem resultado */
+.caixa:has(span:empty) {
+    display: none;
+}
+
+#status {
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* imagem do pokémon */
+#img {
+    width: 160px;
+    height: 160px;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 12px rgba(225, 78, 255, 0.6));
+}
+
+/* esconde a imagem enquanto não tem src (evita ícone quebrado) */
+#img[src=""] {
+    display: none;
+}
